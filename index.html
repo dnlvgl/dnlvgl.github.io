@@ -1,51 +1,77 @@
+<!DOCTYPE html>
 <html lang="en-us">
-<head>
-  <meta charset="utf-8">
-  <title>👋 Daniel Vogel - Web Developer</title>
-  <meta name="author" content="Daniel Vogel">
-  <meta name="description" content="I'm a Web Developer in Cologne. Mainly into JavaScript.">
-  <meta property="og:title" content="👋 Daniel Vogel - Web Developer">
-  <meta property="og:type" content="website">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/tachyons.min.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>👋 Daniel Vogel - Web Developer</title>
+    <meta name="author" content="Daniel Vogel" />
+    <meta
+      name="description"
+      content="I'm a Web Developer in Cologne. Mainly into JavaScript."
+    />
+    <meta property="og:title" content="👋 Daniel Vogel - Web Developer" />
+    <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/tachyons.min.css" />
+  </head>
 
-<body class="">
-  <div class="flex flex-column justify-center vh-100 w-100 code">
-    <div class="ma4">
-      <header>
-        <h1 class="f6 fw1 tracked mb2 lh-title">Daniel Vogel</h2>
-      </header>
-      <div class="f4 f3-m f2-l">
-        <p>I'm a Web Developer in Cologne. Mainly into JavaScript. Node.js and Python are cool too tough.</p>
-        <p>Currently a JavaScript Engineer at <a class="underline" href="https://www.real-digital.de/">real.digital</a>
-        </p>
+  <body class="">
+    <div class="flex flex-column justify-center vh-100 w-100 code">
+      <div class="ma4">
+        <header>
+          <h1 class="f6 fw1 tracked mb2 lh-title">Daniel Vogel</h1>
+        </header>
+        <div class="f4 f3-m f2-l">
+          <p>
+            I'm a Web Developer in Cologne. Mainly into JavaScript. Node.js and
+            Python are cool too tough.
+          </p>
+          <p>
+            Currently a JavaScript Engineer at
+            <a class="underline" href="https://www.real-digital.de/"
+              >real.digital</a
+            >
+          </p>
+        </div>
+        <p>You can find me here:</p>
+        <ul class="list pl0">
+          <li>
+            <a class="underline" href="https://github.com/dnlvgl">github</a>
+          </li>
+          <li>
+            <a class="underline" href="https://www.linkedin.com/in/dnlvgl"
+              >linkedin</a
+            >
+          </li>
+        </ul>
       </div>
-      <p>You can find me here:</p>
-      <ul class="list pl0">
-        <li><a class="underline" href="https://github.com/dnlvgl">github</a></li>
-        <li><a class="underline" href="https://www.linkedin.com/in/dnlvgl">linkedin</a></li>
-      </ul>
     </div>
-  <script>
-    const colors = [
-      { fg: 'navy', bg: 'bg-washed-green' },
-      { fg: 'light-purple', bg: 'bg-light-yellow' },
-      { fg: 'purple', bg: 'bg-light-red' },
-      { fg: 'dark-blue', bg: 'bg-light-green' },
-      { fg: 'dark-blue', bg: 'bg-washed-red' },
-      { fg: 'light-pink', bg: 'bg-navy' }
-    ];
-    const linkElems = document.querySelectorAll('a');
-    const selectTheme = () => {
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-      document.body.classList.add(randomColor.fg, randomColor.bg);
-      for (let element of linkElems) {
-        element.classList.add(randomColor.fg);
-      }
-    }
-    selectTheme();
-  </script>
-</body>
+    <script>
+      const colors = [
+        { fg: "navy", bg: "bg-washed-green" },
+        { fg: "light-purple", bg: "bg-light-yellow" },
+        { fg: "purple", bg: "bg-light-red" },
+        { fg: "dark-blue", bg: "bg-light-green" },
+        { fg: "dark-blue", bg: "bg-washed-red" },
+        { fg: "light-pink", bg: "bg-navy" }
+      ];
+      const linkElems = document.querySelectorAll("a");
+      const selectTheme = () => {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.classList.add(randomColor.fg, randomColor.bg);
+        for (let element of linkElems) {
+          element.classList.add(randomColor.fg);
+        }
+      };
+      const style = [
+        'background-image: url("https://media.giphy.com/media/3o85xoi6nNqJQJ95Qc/giphy.gif")',
+        "background-size: cover",
+        "color: #fff",
+        "padding: 10px 20px",
+        "line-height: 35px"
+      ].join(";");
+      console.log("Hi there!%c ", style); // it works!
 
+      selectTheme();
+    </script>
+  </body>
 </html>
