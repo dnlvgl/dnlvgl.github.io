@@ -1,0 +1,22 @@
+{
+  "name": "dnlvgl.github.io",
+  "version": "1.0.0",
+  "description": "simple landing page",
+  "author": "Daniel Vogel",
+  "private": true,
+  "scripts": {
+    "build:css": "postcss -o css/tachyons.min.css css/tachyons.css",
+    "watch": "onchange -i 'index.html' -- npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnlvgl/dnlvgl.github.io.git"
+  },
+  "homepage": "https://github.com/dnlvgl/dnlvgl.github.io#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "cssnano": "^4.1.10",
+    "onchange": "^6.0.0",
+    "postcss-cli": "^6.1.3"
+  }
+}
