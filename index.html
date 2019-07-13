@@ -1,10 +1,48 @@
 <head>
   <meta charset="utf-8">
-  <title>dnlvgl</title>
-  <meta name="description" content="dnlvgl">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Daniel Vogel</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/tachyons.min.css">
 </head>
-<body>
-<p>Nothing to see here, move along.</p>
+<!-- bg-washed-green navy -->
+
+<body class="">
+  <div class="flex flex-column justify-center vh-100 w-100 code">
+    <div class="ma4">
+      <header>
+        <h1 class="f6 fw1 tracked mb2 lh-title">Daniel Vogel</h2>
+      </header>
+      <div class="f4 f3-m f2-l">
+        <p>I'm a Web Developer in Cologne. Mainly into JavaScript. Node.js and Python are cool too I guess.</p>
+        <p>Currently a JavaScript Engineer at <a class="underline" href="https://www.real-digital.de/">real.digital</a>
+        </p>
+      </div>
+      <p>You can find me here:</p>
+      <ul class="list pl0">
+        <li><a class="underline" href="https://github.com/dnlvgl">github</a></li>
+        <li><a class="underline" href="https://www.linkedin.com/in/dnlvgl">linkedin</a></li>
+      </ul>
+    </div>
+  <script>
+    const colors = [
+      { fg: 'navy', bg: 'bg-washed-green' },
+      { fg: 'light-purple', bg: 'bg-light-yellow' },
+      { fg: 'purple', bg: 'bg-light-red' },
+      { fg: 'dark-blue', bg: 'bg-light-green' },
+      { fg: 'dark-blue', bg: 'bg-washed-red' },
+      { fg: 'light-pink', bg: 'bg-navy' }
+    ];
+    const linkElems = document.querySelectorAll('a');
+    const selectTheme = () => {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.classList.add(randomColor.fg, randomColor.bg);
+      for (let element of linkElems) {
+        element.classList.add(randomColor.fg);
+      }
+    }
+    selectTheme();
+  </script>
 </body>
+
 </html>
