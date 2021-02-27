@@ -8,13 +8,18 @@
       name="description"
       content="I'm a Web Developer in Cologne. Mainly into JavaScript."
     />
-    <meta property="og:title" content="👋 Daniel Vogel - Web Developer" />
+    <meta property="og:title" content="Daniel Vogel - Web Developer" />
     <meta property="og:type" content="website" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/tachyons.min.css" />
   </head>
 
-  <body class="">
+  <body>
+    <div class="absolute right-2 top-2">
+      <button class="dib bn bg-transparent pa0 f1 pointer grow button-reset">
+        🎰
+      </button>
+    </div>
     <div class="flex flex-column justify-center vh-100 w-100 code">
       <div class="ma4">
         <header>
@@ -26,7 +31,7 @@
             Python are cool too though.
           </p>
           <p>
-            Currently a Lead Frontend Engineer at
+            Currently Lead Frontend Engineer at
             <a class="underline" href="https://www.real-digital.de/">real.digital</a>
           </p>
         </div>
@@ -41,33 +46,6 @@
         </ul>
       </div>
     </div>
-    <script>
-      const colors = [
-        { fg: "navy", bg: "bg-washed-green" },
-        { fg: "light-purple", bg: "bg-light-yellow" },
-        { fg: "purple", bg: "bg-light-red" },
-        { fg: "dark-blue", bg: "bg-light-green" },
-        { fg: "dark-blue", bg: "bg-washed-red" },
-        { fg: "light-pink", bg: "bg-navy" }
-      ];
-      const titleEmojis = ["👋 ", "👨‍💻 ", "🙌 ", "🚀 ", "🎆 ", "🐦 "];
-      const linkElems = document.querySelectorAll("a");
-
-      const randomArraylElement = array => {
-        return array[Math.floor(Math.random() * array.length)];
-      };
-
-      const selectTheme = () => {
-        const randomColor = randomArraylElement(colors);
-        document.body.classList.add(randomColor.fg, randomColor.bg);
-        for (let element of linkElems) {
-          element.classList.add(randomColor.fg);
-        }
-        const randomEmoji = randomArraylElement(titleEmojis);
-        document.title = randomEmoji.concat(document.title);
-      };
-
-      selectTheme();
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
