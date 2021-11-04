@@ -9,6 +9,7 @@ const pageColors = [
 const titleEmojis = ["👋", "👨‍💻", "🙌", "🚀", "🎆", "🐦"];
 const linkElems = document.querySelectorAll("a");
 const favicon = document.querySelector("link[rel*='icon']");
+const faviconHeadline = document.querySelector(".js-emoji");
 // save current color object and title emoji for random version
 let currentColor = null;
 let currentFaviconEmoji = null;
@@ -43,6 +44,7 @@ const setTheme = () => {
         element.classList.add(currentColor.fg);
     }
     favicon.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${currentFaviconEmoji}</text></svg>`
+    faviconHeadline.textContent = currentFaviconEmoji;
 }
 
 // reset theme by deleting classes on body and deleting fg color on all links
