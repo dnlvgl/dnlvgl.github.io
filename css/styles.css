@@ -1,0 +1,99 @@
+/* Reset / Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Consolas, monaco, monospace;
+}
+
+a {
+    color: inherit;
+}
+
+/* Layout */
+.theme-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.25s ease-out;
+}
+
+.theme-button:hover,
+.theme-button:focus {
+    transform: scale(1.05);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content {
+    margin: 2rem;
+}
+
+/* Typography */
+.site-title {
+    font-size: 0.875rem;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+}
+
+.intro {
+    font-size: 1.25rem;
+}
+
+/* Links list */
+.links-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.links-list a {
+    text-decoration: underline;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    display: inline-block;
+}
+
+/* Responsive */
+@media screen and (min-width: 30em) {
+    .intro {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .intro {
+        font-size: 2.25rem;
+    }
+}
+
+/* Theme colors (used by JS) */
+.navy { color: #001b44; }
+.light-purple { color: #a463f2; }
+.purple { color: #5e2ca5; }
+.dark-blue { color: #00449e; }
+.light-pink { color: #ffa3d7; }
+
+.bg-washed-green { background-color: #e8fdf5; }
+.bg-light-yellow { background-color: #fbf1a9; }
+.bg-light-red { background-color: #ffdfdf; }
+.bg-light-green { background-color: #9eebcf; }
+.bg-washed-red { background-color: #ffdfdf; }
+.bg-navy { background-color: #001b44; }
